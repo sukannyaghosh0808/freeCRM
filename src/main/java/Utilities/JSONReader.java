@@ -14,20 +14,20 @@ public class JSONReader {
 	{
 		JSONParser jsonparser = new JSONParser();
 		FileReader reader = new FileReader("C:\\Users\\Sukannya Ghosh\\eclipse-workspace\\freeCRM\\src\\main\\java\\Utilities\\testData.json");
-		String creds;
+		
 		Object obj = jsonparser.parse(reader);
 		
-		JSONObject jsonobject =(JSONObject)obj;		
+		String creds = null;
+		
+		JSONObject empjsonobject =(JSONObject)obj;		
 		
 		if(value.contentEquals("email"))
 		{
-			creds = (String)jsonobject.get("email");			
+			creds = (String)empjsonobject.get("email");	
+			
 		}
-		else
-		{
-			creds=(String)jsonobject.get("password");
-		}
-		return creds;			
+		
+		return creds;
 	}
 
 }
