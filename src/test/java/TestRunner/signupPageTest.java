@@ -29,7 +29,7 @@ public class signupPageTest extends BaseClass {
 	}
 	@AfterTest
 	public static void tearDown() {
-		driver.close();
+		driver.quit();
 	}
 	@BeforeClass
 	public static void openTestReport() {
@@ -68,9 +68,9 @@ public class signupPageTest extends BaseClass {
 	public static void signupTest() throws IOException, ParseException
 	{
 		JSONReader rd = new JSONReader();
-		String email= rd.readData("email");
-		System.out.print(email);
+		String emailvalue= rd.readData("email");
+		System.out.print(emailvalue);
 		sg=new SignupPage();
-		//sg.email().sendKeys(email);
+		sg.email().sendKeys(emailvalue);
 	}
 }
