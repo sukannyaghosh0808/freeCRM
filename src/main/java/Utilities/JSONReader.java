@@ -23,8 +23,7 @@ public class JSONReader {
 		
 		if(value.contentEquals("email"))
 		{
-			creds = (String)empjsonobject.get("email");	
-			
+			creds = (String)empjsonobject.get("email");				
 		}
 		
 		return creds;
